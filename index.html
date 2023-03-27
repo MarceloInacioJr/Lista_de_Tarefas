@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="conteudo">
+      <div id="desaparecer" class="desativar"></div>
+      <div id="formulario" class="desativar">
+
+        <h1 id="titulo-formulario">Criar meta</h1>
+        <select name="tipo" id="tipo">
+          <option value="grupo">Criar grupo</option>
+          <option value="tarefa">Criar tarefa</option>
+        </select>
+
+        <!-- <select name="id-grupo" id="id-grupo">
+          <option value="1">Opcao 1</option>
+        </select> -->
+        <div id="input-type"></div>
+        <!-- <input type="number" name="id-grupo" id="id-grupo" placeholder="Id Grupo"> -->
+        <input type="text" name="nome-grupo" id="nome-grupo" placeholder="Nome Grupo">
+        <input type="text" name="nome-meta" id="nome-meta" placeholder="Nome Tarefa">
+        <input type="number" min="1" max="7" name="qtd-item" id="qtd-item" placeholder="Quantidade de caixa">
+        <input type="text" name="apelido" id="apelido" placeholder="Apelido">
+        <div class="branco"></div>
+
+        <input type="button" value="Adicionar" class="btn-adicionar" id="btn-adicionar">
+        <input type="button" value="Cancelar" class="btn-cancelar" id="btn-cancelar">
+      </div>
+      <div class="iniciar">
+        <input type="submit" id="btn-iniciar" class="desativa" value="+">
+      </div>
+
+      <div class="conteudo-metas">
+      </div>
+      <div id="boardgeral" style="display:flex;flex-direction:row;flex-wrap:wrap;">
+      </div>
+
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

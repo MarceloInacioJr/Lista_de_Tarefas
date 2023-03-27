@@ -1,0 +1,289 @@
+html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .desativar {
+      visibility: hidden;
+
+    }
+
+    /* conteiner */
+    .container {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    /* conteudo */
+    .conteudo {
+
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+
+    }
+
+
+    /* desaparecer */
+    #desaparecer {
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      background-color: black;
+      opacity: .5;
+    }
+
+    /* formulario */
+    #formulario {
+
+      position: absolute;
+      height: 80vh;
+      width: 50vw;
+      padding: 5%;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.981);
+      margin-top: 5%;
+      margin-left: 50%;
+      transform: translate(-50%);
+      display: grid;
+      gap: 10px;
+      text-align: center;
+      grid-template-areas:
+        "titulo titulo titulo titulo"
+        "tipo tipo tipo tipo"
+        "id grupo grupo grupo"
+        "nome nome nome nome"
+        "qtd-item apelido apelido apelido"
+        "branco branco branco branco"
+        "cadastrar cadastrar cancelar cancelar"
+      ;
+      box-sizing: border-box;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      height: 40px;
+      border: 1px solid gray;
+      border-radius: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    select {
+      background-color: black;
+      color: aliceblue;
+      font-size: 16px;
+    }
+
+    .desabilitar {
+      opacity: .4;
+
+    }
+
+    #tipo {
+      grid-area: tipo;
+    }
+
+    #titulo-formulario {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      grid-area: titulo;
+      font-weight: bold;
+    }
+
+    #id-grupo {
+      grid-area: id;
+    }
+
+    #nome-grupo {
+      grid-area: grupo;
+    }
+
+    #nome-meta {
+      grid-area: nome;
+    }
+
+    #qtd-item {
+      grid-area: qtd-item;
+    }
+
+    #apelido {
+      grid-area: apelido;
+    }
+
+    #btn-adicionar {
+      grid-area: cadastrar;
+    }
+
+    .add-submetas {
+      height: 40px;
+      width: 40px;
+    }
+
+    .branco {
+      grid-area: branco;
+      height: 30px;
+      width: 300px;
+    }
+
+
+    #add-submetas:hover {
+      transition: .9s;
+      background-color: rgb(1, 73, 1);
+      box-shadow: rgba(0, 129, 13, 0.35) 0px 0px 15px;
+    }
+
+
+    /* iniciar */
+
+    .iniciar {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #btn-iniciar {
+      border: 1px solid transparent;
+      border-radius: 3px;
+      background-color: green;
+      color: white;
+      font-size: 18px;
+      height: 30px;
+      width: 100px;
+      cursor: pointer;
+      transition: .5s;
+    }
+
+    #btn-iniciar:hover {
+      background-color: rgb(1, 73, 1);
+    }
+
+    #btn-cancelar {
+      grid-area: cancelar;
+    }
+
+
+
+
+    .btn-adicionar,
+    .btn-cancelar {
+      border-radius: 10px;
+      border: 1px solid transparent;
+      height: 40px;
+      color: aliceblue;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .btn-adicionar {
+      background-color: green;
+    }
+
+
+    .btn-adicionar:hover {
+      background-color: rgb(1, 93, 1);
+      color: white;
+    }
+
+    .btn-cancelar {
+      background-color: brown;
+    }
+
+    .btn-cancelar:hover {
+      background-color: rgb(123, 37, 37);
+      color: white;
+    }
+
+
+    #board-geral {
+      position: relative;
+    }
+
+
+    .accordion {
+      cursor: pointer;
+      border: solid 1.5px grey;
+      text-align: left;
+      outline: none;
+      background-color: sandybrown;
+      transition: 0.4s;
+      color: rgb(10, 4, 39);
+      margin-top: 5px;
+      margin-bottom: 3px;
+      max-width: 150px;
+    }
+
+    .accordion:hover {
+      background-color: rgb(249, 249, 132);
+    }
+
+    .grupo {
+      display: flex;
+      flex-wrap: wrap;
+      width: auto;
+      border: solid grey 1px;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .grupo legend {
+      font-size: 30px;
+      border: none;
+      margin: 0;
+      border: solid rgb(215, 17, 17);
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .panel {
+      display: none;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background-color: white;
+      overflow: hidden;
+    }
+
+    .elementos {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .caixa {
+      display: flex;
+      flex-wrap: wrap;
+      border: solid grey 1px;
+      border-radius: 10px;
+      padding: 5px;
+      margin: 3px;
+    }
+
+    .caixa legend {
+      font-size: 10px;
+      display: block;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    .caixa label {
+      margin: 0;
+      padding: 0;
+      max-width: 30%;
+    }
+
+    .caixa label input {
+      margin: 0;
+    }
+
+    .itens {
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
